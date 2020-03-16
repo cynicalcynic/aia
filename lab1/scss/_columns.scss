@@ -1,0 +1,30 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 768px,
+  lg: 1024px
+);
+
+.row {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    & > * {
+        width: 100%;
+        // border: 1px solid red;
+    }
+}
+
+@mixin col($infix) {
+    @for $i from 1 through 12 {
+        .col-#{$infix}-#{$i} {
+            width: 100% / (12 / $i);
+        }
+    }
+}
+
+@each $infix, $breakpoint in $grid-breakpoints {
+    @media screen and (min-width: #{$breakpoint}){
+        @include col($infix)
+    }
+}
