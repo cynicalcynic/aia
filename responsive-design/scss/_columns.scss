@@ -1,7 +1,7 @@
 /* 
 This dead simple column system imitates basic bootstrap grid behaviour.
-It works with three tiers of classes which are are activated when screen width is larger or equal to the breakpoint.
-For instance col-md-12 will cause an elements to be 12 columns wide for every screen size larger or equal to 600px.
+It works with three tiers of classes which are activated when screen width is larger or equal to the coresponding breakpoint.
+For instance col-md-12 will cause an element to be 12 columns wide for every screen size larger or equal to 600px.
 Because lg classes override md classes it is possilble to add col-lg-6 to that element to change its behaviour above 1024px.
 */
 
