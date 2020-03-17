@@ -76,7 +76,7 @@ main {
     margin: $gutters / 2;
     border: $border;
     background-color: $background-color;
-    height: calc(100% - #{$gutters});
+    min-height: calc(100% - #{$gutters});
     font-family: Arial, sans-serif;
 }
 
