@@ -23,6 +23,9 @@ body {
     flex-direction: column;
 }
 
+.content-wrapper {
+    flex: 1 0 auto;
+}
 
 .header {
     display: flex;
@@ -30,42 +33,39 @@ body {
     align-items: center;
     margin-bottom: 50px;
     padding: 30px 30px 0 30px;
-}
 
-.header__title{
-    display: flex;
-    align-items: center;
-}
-
-.title__text{
-    font-size: 2rem;
-    margin-left: 10px;
-
-    @media screen and (max-width: 480px){
-        display: none;
+    &__hamburger{
+        @media screen and (min-width: 480px){
+            display: none;
+        }
     }
 }
 
-.header__hamburger{
-    @media screen and (min-width: 480px){
-        display: none;
+.title {
+    display: flex;
+    align-items: center;
+
+    &__text {
+        font-size: 2rem;
+        margin-left: 10px;
+    
+        @media screen and (max-width: 480px){
+            display: none;
+        }
     }
 }
 
 .navbar {
     display: flex;
+
     @media screen and (max-width: 480px){
         display: none;
     }
-}
 
-.navbar__item {
-    font-size: 1rem;
-    margin: 0 10px 0 10px;
-}
-
-.content-wrapper{
-    flex: 1 0 auto;
+    &__item {
+        font-size: 1rem;
+        margin: 0 10px 0 10px;
+    }
 }
 
 main {
@@ -78,39 +78,39 @@ main {
     background-color: $background-color;
     min-height: calc(100% - #{$gutters});
     font-family: Arial, sans-serif;
-}
 
-.lorem__title-wrapper {
-    display: flex;
-    margin-bottom: 30px;
-    justify-content: flex-end;
-}
+    &__title-wrapper {
+        display: flex;
+        margin-bottom: 30px;
+        justify-content: flex-end;
+    }
 
-.lorem__title {
-    font-size: 1.5rem;
-    text-align: center;
-    width: 200px;
-    padding: 10px;
-    border-bottom: $border;
-    border-left: $border;
-}
+    &__title{
+        font-size: 1.5rem;
+        text-align: center;
+        width: 200px;
+        padding: 10px;
+        border-bottom: $border;
+        border-left: $border;
 
-.lorem__title--blue {
-    background-color: #69d2e7;
-}
+        &--blue{
+            background-color: #69d2e7;
+        }
 
-.lorem__title--orange {
-    background-color: #f38630;
-}
+        &--orange {
+            background-color: #f38630;
+        }
+        
+        &--pink {
+            background-color: #e9aeaf;
+        }
+    }
 
-.lorem__title--pink {
-    background-color: #e9aeaf;
-}
-
-.lorem__text {
-    padding: 15px;
-    text-align: justify;
-    line-height: 1.2rem;
+    &__text {
+        padding: 15px;
+        text-align: justify;
+        line-height: 1.2rem;
+    }
 }
 
 .footer {
@@ -123,8 +123,8 @@ main {
     background-color: $background-color;
     font-family: Arial, sans-serif;
     line-height: 1.2rem;
-}
 
-.footer__name {
-    font-weight: bold;
+    &__name {
+        font-weight: bold;
+    }
 }
