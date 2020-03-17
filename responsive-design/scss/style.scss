@@ -36,7 +36,8 @@ body {
     padding: $gutters $gutters 0 $gutters;
 
     &__hamburger{
-        @media screen and (min-width: 480px){
+        display: block;
+        @media screen and (min-width: 1024px){
             display: none;
         }
     }
@@ -50,8 +51,9 @@ body {
         font-size: 2rem;
         margin-left: 10px;
     
-        @media screen and (max-width: 480px){
-            display: none;
+        display: none;
+        @media screen and (min-width: 600px){
+            display: block;
         }
     }
 }
@@ -59,7 +61,7 @@ body {
 .navbar {
     display: flex;
 
-    @media screen and (max-width: 480px){
+    @media screen and (max-width: 1024px){
         display: none;
     }
 
