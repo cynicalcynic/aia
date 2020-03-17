@@ -30,6 +30,7 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
+    //I decided to center it (it is not centered on the mockup) because it just looks better
     align-items: center;
     margin-bottom: 50px;
     padding: 30px 30px 0 30px;
@@ -76,6 +77,7 @@ main {
     margin: $gutters / 2;
     border: $border;
     background-color: $background-color;
+    //this allows the .lorem div to be as high as its column parent which height is determined by the highest .lorem element
     min-height: calc(100% - #{$gutters});
     font-family: Arial, sans-serif;
 
