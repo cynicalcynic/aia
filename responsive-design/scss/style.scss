@@ -32,7 +32,7 @@ body {
     justify-content: space-between;
     //I decided to center it (it is not centered on the mockup) because it just looks better
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: $gutters / 2;
     padding: $gutters $gutters 0 $gutters;
 
     &__hamburger{
@@ -70,7 +70,7 @@ body {
 }
 
 .column-wrapper {
-   padding: 0 $gutters / 2 0 $gutters / 2; 
+   padding: $gutters / 2;
 }
 
 .lorem {
