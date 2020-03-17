@@ -1,3 +1,10 @@
+/* 
+This dead simple column system imitates basic bootstrap grid behaviour.
+It works with three tiers of classes which are are activated when screen width is larger or equal to the breakpoint.
+For instance col-md-12 will cause an elements to be 12 columns wide for every screen size larger or equal to 600px.
+Because lg classes override md classes it is possilble to add col-lg-6 to that element to change its behaviour above 1024px.
+*/
+
 $grid-breakpoints: (
   sm: 0px,
   md: 600px,
@@ -6,8 +13,8 @@ $grid-breakpoints: (
 
 .row {
     display: flex;
-    justify-content: flex-start;
     flex-wrap: wrap;
+    //This provides a fallback when no class is activated (all elements stack on top of each other).
     & > * {
         width: 100%;
     }
