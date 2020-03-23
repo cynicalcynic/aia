@@ -6,13 +6,16 @@
 </head>
 <body>
 <div class="container">
-    <h1>Welcome to my TODO collection</h1>
-    <button class="button" id="add-todo">Add a TODO</button>
-    <table>
+    <header class="header">
+        <h1 class="header__title">Welcome to my TODO collection</h1>
+    </header>
+    <button class="button button--primary" id="add-todo">Add a TODO</button>
+    <table class="table">
         <thead>
         <tr>
-            <th>Title</th>
-            <th>Description</th>
+            <th class="table__item">Title</th>
+            <th class="table__item">Description</th>
+            <th class="table__item">Actions</th>
         </tr>
         </thead>
         <tbody id="todo-list">
