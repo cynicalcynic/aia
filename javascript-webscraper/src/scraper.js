@@ -82,7 +82,7 @@ const argv = require('yargs')
     }
 
     console.log(`Fetched ${chalk.bold.yellow(productList.length)} whiskeys`);
-    console.log(chalk.bold('No'.padEnd(4) + `Name`.padEnd(128) + 'Unit price [zł/100ml/year]'));
+    console.log(chalk.bold('No'.padEnd(4) + `Name`.padEnd(128) + 'Unit price [PLN/100ml/year]'));
     productList.forEach((product, index) => {
         console.log((index + 1).toString().padEnd(3), product.name.padEnd(127), product.unitPrice.toString().padEnd(4, '0'));
     });
