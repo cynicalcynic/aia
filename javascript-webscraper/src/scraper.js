@@ -15,6 +15,7 @@ const argv = require('yargs')
         describe: 'sort ascending',
         type: 'boolean'
     })
+    .version(false)
     .help('help')
     .locale('en')
     .argv;
