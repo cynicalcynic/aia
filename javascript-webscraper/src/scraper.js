@@ -4,7 +4,7 @@ const request = require('request-promise');
 const {JSDOM} = require('jsdom');
 const chalk = require('chalk');
 const argv = require('yargs')
-    .usage('$0 [options]')
+    .usage('$0 [OPTIONS]')
     .option('num', {
         alias: 'n',
         describe: "Display n whiskeys",
@@ -12,7 +12,7 @@ const argv = require('yargs')
     })
     .option('reverse', {
         alias: 'r',
-        describe: 'sort ascending',
+        describe: 'Sort ascending',
         type: 'boolean'
     })
     .version(false)
