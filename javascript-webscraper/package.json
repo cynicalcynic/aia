@@ -4,6 +4,7 @@
   "description": "Cost-per-unit of whisky webscraper",
   "main": "src/scraper.js",
   "scripts": {
+    "dev": "nodemon src/scraper.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Michał Świderski",
