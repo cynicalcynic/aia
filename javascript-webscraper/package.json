@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Cost-per-unit of whisky webscraper",
   "main": "src/scraper.js",
+  "bin": {
+    "scraper": "src/scraper.js",
+    "whisky": "src/scraper.js"
+  },
   "scripts": {
     "dev": "nodemon src/scraper.js",
     "test": "echo \"Error: no test specified\" && exit 1"
