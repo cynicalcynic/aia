@@ -4,7 +4,6 @@
   "description": "Cost-per-unit of whisky webscraper",
   "main": "src/scraper.js",
   "bin": {
-    "scraper": "src/scraper.js",
     "whisky": "src/scraper.js"
   },
   "scripts": {
