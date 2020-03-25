@@ -20,35 +20,27 @@ const argv = require('yargs')
     .locale('en')
     .argv;
 
+const url = 'https://singlemalt.pl/single-malt?limit=80&mode=list';
 
 (async function () {
     console.log('Fetching whiskies...');
     let productList = [];
 
-    const url = 'https://singlemalt.pl/single-malt?limit=80&mode=list';
-    let res, dom;
-    try {
-        res = await request.get(url);
-        dom = new JSDOM(res);
-    } catch (e) {
-        console.error(chalk.bold.red('Connection failed\nQuitting...'));
-        process.exit(1);
-    }
-
     let page = 1;
     while (true) {
-        if (dom.window.document.querySelectorAll('.next').length === 0) {
-            break;
-        }
-
+        let dom;
         try {
-            res = await request.get(
+            let res = await request.get(
                 `${url}&p=${page++}`
             );
             dom = new JSDOM(res);
         } catch (e) {
             console.error(e.message + '\nQuitting...');
             process.exit(1);
+        }
+
+        if (dom.window.document.querySelectorAll('.next').length === 0) {
+            break;
         }
 
         const list = dom.window.document.querySelectorAll('#products-list li');
