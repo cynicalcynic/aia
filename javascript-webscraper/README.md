@@ -18,3 +18,17 @@ whisky [OPTIONS]
 --reverse, -r  Sort ascending                                        [boolean]
 --help         Show help                                             [boolean]
 ```
+
+## Sample output
+```
+$ whisky --num 5
+
+Fetching whiskeys...
+Fetched 5 whiskeys
+No  Name                                                                     Price [PLN]  Unit price [PLN/100ml/year]
+1   Brora 38 Years Old / Diageo Special Release 2016 / 48,6% / 0,7 l         6749         25.37
+2   Brora 37 Years Old / Diageo Special Release 2015 / 50,4% / 0,7 l         6299         24.32
+3   Ardbeg 23 Years Old / Twenty Something / 46,3% / 0,7 l                   2969         18.44
+4   Cragganmore 25 Years Old  / Diageo Special Release 2014 / 51,4% / 0,7 l  2499         14.28
+5   Glenfarclas 40 Years Old / 43% / 0,7 l                                   3789         13.53
+```
