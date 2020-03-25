@@ -82,10 +82,12 @@ const argv = require('yargs')
         productList = productList.slice(0, argv.num);
     }
 
+    const maxNameLength = Math.max.apply(Math, productList.map(el => el.name.length));
+
     console.log(`Fetched ${chalk.bold.yellow(productList.length)} whiskeys`);
-    console.log(chalk.bold('No'.padEnd(4) + `Name`.padEnd(128) + 'Unit price [PLN/100ml/year]'));
+    console.log(chalk.bold('No'.padEnd(4) + `Name`.padEnd(maxNameLength + 2) + 'Unit price [PLN/100ml/year]'));
     productList.forEach((product, index) => {
-        console.log((index + 1).toString().padEnd(3), product.name.padEnd(127), product.unitPrice.toString().padEnd(4, '0'));
+        console.log((index + 1).toString().padEnd(3), product.name.padEnd(maxNameLength - 1 + 2), product.unitPrice.toString().padEnd(4, '0'));
     });
 })();
 
