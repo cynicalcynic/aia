@@ -68,6 +68,10 @@ body {
   border-collapse: collapse;
   margin: 2rem 0;
 
+  &__head {
+    font-weight: bold;
+  }
+
   &__item {
     width: 33.33%;
     border-bottom: 1px solid #bbb;
