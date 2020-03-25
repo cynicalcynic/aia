@@ -7,7 +7,7 @@ const argv = require('yargs')
     .usage('$0 [OPTIONS]')
     .option('num', {
         alias: 'n',
-        describe: "Display n whiskeys",
+        describe: "Display n whiskies",
         type: 'number'
     })
     .option('reverse', {
@@ -22,7 +22,7 @@ const argv = require('yargs')
 
 
 (async function () {
-    console.log('Fetching whiskeys...');
+    console.log('Fetching whiskies...');
     let productList = [];
 
     const url = 'https://singlemalt.pl/single-malt?limit=80&mode=list';
@@ -85,7 +85,7 @@ const argv = require('yargs')
 
     const maxNameLength = Math.max.apply(Math, productList.map(el => el.name.length));
 
-    console.log(`Fetched ${chalk.bold.yellow(productList.length)} whiskeys`);
+    console.log(`Fetched ${chalk.bold.yellow(productList.length)} whiskies`);
     console.log(chalk.bold('No.'.padEnd(5) + `Name`.padEnd(maxNameLength + 2) + 'Price [PLN]'.padEnd(13) + 'Unit price [PLN/100ml/year]'));
     productList.forEach((product, index) => {
         console.log((index + 1).toString().padEnd(4), product.name.padEnd(maxNameLength - 1 + 2), product.price.toString().padEnd(12), product.unitPrice.toString().padEnd(4, '0'));

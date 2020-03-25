@@ -1,5 +1,5 @@
 # Javascript single malt webscraper
-Whisky webscraper. Calculates unit price (PLN/100ml/year of maturation) of single malt whiskeys found on https://singlemalt.pl.
+Whisky webscraper. Calculates unit price (PLN/100ml/year of maturation) of single malt whiskies found on https://singlemalt.pl.
 
 JSDOM library has been used to parse the site and fetch the information from the DOM. Price, maturation time and volume are contained in whisky's name and are separated using regular expressions.
 
@@ -23,8 +23,8 @@ whisky [OPTIONS]
 ```
 $ whisky --num 5
 
-Fetching whiskeys...
-Fetched 5 whiskeys
+Fetching whiskies...
+Fetched 5 whiskies
 No  Name                                                                     Price [PLN]  Unit price [PLN/100ml/year]
 1   Brora 38 Years Old / Diageo Special Release 2016 / 48,6% / 0,7 l         6749         25.37
 2   Brora 37 Years Old / Diageo Special Release 2015 / 50,4% / 0,7 l         6299         24.32
