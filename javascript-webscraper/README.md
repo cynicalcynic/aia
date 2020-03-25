@@ -1,4 +1,4 @@
-# Javascript single malt webscraper
+# Javascript single malt web scraper
 Whisky webscraper. Calculates unit price (PLN/100ml/year of maturation) of single malt whiskies found on https://singlemalt.pl.
 
 JSDOM library has been used to parse the site and fetch the information from the DOM. Price, maturation time and volume are contained in whisky's name and are separated using regular expressions.
