@@ -1,0 +1,14 @@
+{
+  "name": "jquery",
+  "version": "1.0.0",
+  "description": "jQuery assignment",
+  "scripts": {
+    "dev": "browser-sync start --server src --watch",
+    "start": "browser-sync start --server"
+  },
+  "author": "Michał Świderski",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.26.7"
+  }
+}
