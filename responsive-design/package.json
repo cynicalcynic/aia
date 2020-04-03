@@ -4,8 +4,8 @@
   "description": "Responsive design assigment",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"sass --watch scss/style.scss css/style.css\" \"live-server --watch=*.html,css/*.css,assets/* --no-browser\"",
-    "build": "sass scss/style.scss css/style.css --style compressed",
+    "dev": "concurrently \"node-sass --watch scss/ --output css/\" \"live-server --watch=*.html,css/*.css,assets/* --no-browser\"",
+    "build": "node-sass scss/ --output css/ --output-style compressed",
     "start": "http-server"
   },
   "author": "Michał Świderski",
