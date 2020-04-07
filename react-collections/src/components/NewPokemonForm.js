@@ -18,15 +18,18 @@ const NewPokemonForm = (props) => {
             <div className="pokemon-form__inputs-wrapper">
                 <div className="pokemon-form__text-inputs">
                     <label>Name</label>
-                    <input className="pokemon-form__input" onChange={(e) => setName(e.target.value)}/>
+                    <input className="pokemon-form__input" onChange={(e) => setName(e.target.value)} value={name}/>
                     <label>Description</label>
-                    <textarea className="pokemon-form__input" onChange={(e) => setDescription(e.target.value)}/>
+                    <textarea className="pokemon-form__input" onChange={(e) => setDescription(e.target.value)}
+                              value={description}/>
                 </div>
                 <div>
                     <label>Rating</label>
                     <select onChange={(e) => {
-                        setRating(e.target.value)
-                    }}>
+                        setRating(Number.parseInt(e.target.value))
+                    }}
+                            value={rating}
+                    >
                         {[1, 2, 3, 4, 5].map(el => {
                             return <option key={el}>{el}</option>
                         })}
@@ -44,6 +47,9 @@ const NewPokemonForm = (props) => {
                     rating,
                     image
                 });
+                setRating(1);
+                setName('');
+                setDescription('');
             }}>Add the pokemon
             </button>
         </form>

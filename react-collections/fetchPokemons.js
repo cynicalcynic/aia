@@ -1,5 +1,6 @@
 const axios = require('axios');
 const fs = require('fs');
+const {v4: uuid} = require('uuid');
 
 (async function () {
     const pokemons = [];
@@ -9,7 +10,7 @@ const fs = require('fs');
         let p = {};
         return axios.get(pokemon.url).then(({data}) => {
             p = {
-                id: data.id,
+                id: uuid(),
                 name: data.name,
                 image: data.sprites.front_default,
                 rating: Math.floor(Math.random() * (5 - 1 + 1)) + 1
@@ -21,7 +22,6 @@ const fs = require('fs');
     });
 
     await Promise.all(requests);
-    pokemons.sort((a, b) => a.id - b.id);
     fs.writeFileSync('pokemons.json', JSON.stringify(pokemons));
     // console.log(pokemons);
 })();
