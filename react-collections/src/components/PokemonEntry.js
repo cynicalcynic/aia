@@ -13,7 +13,7 @@ const PokemonEntry = (props) => {
                 <h5 className="pokemon-entry__title">{props.pokemon.name}</h5>
                 <p className="pokemon-entry__description">{props.pokemon.description}</p>
             </div>
-            <RatingSelector max={6} rating={props.pokemon.rating}
+            <RatingSelector max={5} rating={props.pokemon.rating}
                             onChange={(rating) => props.onRate(props.pokemon.id, rating)}/>
             <button className="pokemon-entry__delete" onClick={() => props.onDelete(props.pokemon.id)}>Delete</button>
         </div>
