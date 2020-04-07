@@ -15,10 +15,13 @@ const RatingSelector = (props) => {
             {
                 !edit ?
                     <button onClick={() => setEdit(true)}>{props.rating}/{props.max}</button> :
-                    <select onChange={(e) => {
-                        setEdit(false);
-                        props.onChange(Number.parseInt(e.target.value));
-                    }}>
+                    <select
+                        value={props.rating}
+                        onChange={(e) => {
+                            setEdit(false);
+                            props.onChange(Number.parseInt(e.target.value));
+                        }}
+                    >
                         {options}
                     </select>
             }
