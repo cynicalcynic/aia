@@ -1,0 +1,23 @@
+.pokemon-form {
+
+  &__inputs-wrapper {
+    display: flex;
+    //align-items: center;
+    //justify-content: space-between;
+  }
+
+  &__text-inputs {
+    margin-right: 2rem;
+    flex-grow: 1;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+
+}

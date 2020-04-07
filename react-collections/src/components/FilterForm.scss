@@ -1,0 +1,12 @@
+.filter-form {
+  display: flex;
+
+  &__input {
+    flex-grow: 1;
+    margin-right: 2rem;
+    height: 38px;
+  }
+
+  &__button {
+  }
+}
