@@ -1,0 +1,59 @@
+.pokemon-entry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+  padding: 1rem 0 1rem 0;
+
+  @media screen and (max-width: 600px) {
+    flex-wrap: wrap;
+  }
+
+  &__image-wrapper {
+    background: #EEE;
+    flex-shrink: 0;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    line-height: 0;
+    padding: 1rem;
+    overflow: hidden;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(2);
+      border: 1px solid lightgray;
+    }
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+    image-rendering: crisp-edges;
+  }
+
+  &__text {
+    padding: 1rem 2rem;
+    flex: 1 1 auto;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+  }
+
+  &__description {
+    color: gray;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+  }
+
+  &__rating {
+
+  }
+
+  &__delete {
+    margin-left: 2rem;
+  }
+}
