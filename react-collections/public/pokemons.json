@@ -1,142 +1,142 @@
 [
   {
-    "id": 1,
+    "id": "a53a55c4-cca5-40f1-a73f-60c423e51390",
+    "name": "ivysaur",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
+    "rating": 3,
+    "description": "There is a bud on this Pokémon’s back. To support its weight,\nIvysaur’s legs and trunk grow thick and strong.\nIf it starts spending more time lying in the sunlight,\nit’s a sign that the bud will bloom into a large flower soon."
+  },
+  {
+    "id": "842166a9-b33c-4998-b30c-efcfef286a6d",
+    "name": "caterpie",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png",
+    "rating": 5,
+    "description": "Perhaps because it would like to grow up\nquickly, it has a voracious appetite, eating\na hundred leaves a day."
+  },
+  {
+    "id": "1b8935f3-63bb-4354-b38a-789558aa8413",
     "name": "bulbasaur",
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
     "rating": 2,
     "description": "Bulbasaur can be seen napping in bright sunlight.\nThere is a seed on its back. By soaking up the sun’s rays,\nthe seed grows progressively larger."
   },
   {
-    "id": 2,
-    "name": "ivysaur",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
-    "rating": 4,
-    "description": "There is a bud on this Pokémon’s back. To support its weight,\nIvysaur’s legs and trunk grow thick and strong.\nIf it starts spending more time lying in the sunlight,\nit’s a sign that the bud will bloom into a large flower soon."
+    "id": "ccd15e54-d455-4317-a4db-f9ee0695af82",
+    "name": "metapod",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png",
+    "rating": 1,
+    "description": "Its shell is filled with a thick liquid. All of the\ncells throughout its body are being rebuilt in\npreparation for evolution."
   },
   {
-    "id": 3,
+    "id": "79a86d8d-53c4-4790-b7c7-7b572b9651dd",
     "name": "venusaur",
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
-    "rating": 4,
+    "rating": 3,
     "description": "There is a large flower on Venusaur’s back. The flower is said\nto take on vivid colors if it gets plenty of nutrition and sunlight.\nThe flower’s aroma soothes the emotions of people."
   },
   {
-    "id": 4,
+    "id": "02034d51-9ce9-4deb-8e0b-1cf286f069a4",
+    "name": "weedle",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/13.png",
+    "rating": 2,
+    "description": "Weedle has an extremely acute sense of smell. It is capable\nof distinguishing its favorite kinds of leaves from those it\ndislikes just by sniffing with its big red proboscis (nose)."
+  },
+  {
+    "id": "7e5210c8-3aba-43a5-a9db-29f8d4fb15b8",
+    "name": "kakuna",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png",
+    "rating": 3,
+    "description": "Kakuna remains virtually immobile as it clings to a tree.\nHowever, on the inside, it is extremely busy as it prepares\nfor its coming evolution.\nThis is evident from how hot the shell becomes to the touch."
+  },
+  {
+    "id": "5f56b593-50c9-44e2-ae40-3b6a8bb6d827",
     "name": "charmander",
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
-    "rating": 4,
+    "rating": 3,
     "description": "The flame that burns at the tip of its tail is an indication\nof its emotions. The flame wavers when Charmander\nis enjoying itself. If the Pokémon becomes enraged,\nthe flame burns fiercely."
   },
   {
-    "id": 5,
+    "id": "068da476-7ca3-42c4-8979-6a0037abf06f",
+    "name": "wartortle",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png",
+    "rating": 5,
+    "description": "Its tail is large and covered with a rich, thick fur. The tail\nbecomes increasingly deeper in color as Wartortle ages.\nThe scratches on its shell are evidence of this Pokémon’s\ntoughness as a battler."
+  },
+  {
+    "id": "23ac229e-7174-4a85-9948-3724837b54e3",
     "name": "charmeleon",
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png",
     "rating": 3,
     "description": "Charmeleon mercilessly destroys its foes using its sharp\nclaws. If it encounters a strong foe, it turns aggressive.\nIn this excited state, the flame at the tip of its tail flares with\na bluish white color."
   },
   {
-    "id": 6,
+    "id": "e85f2260-2fd8-4728-9b2a-2b24fc93f728",
     "name": "charizard",
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
-    "rating": 1,
+    "rating": 4,
     "description": "Charizard flies around the sky in search of powerful opponents.\nIt breathes fire of such great heat that it melts anything.\nHowever, it never turns its fiery breath on any opponent\nweaker than itself."
   },
   {
-    "id": 7,
+    "id": "5c0a431b-e6f1-441f-8f4b-df33ae36033e",
     "name": "squirtle",
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
-    "rating": 1,
+    "rating": 4,
     "description": "Squirtle’s shell is not merely used for protection.\nThe shell’s rounded shape and the grooves on its\nsurface help minimize resistance in water,\nenabling this Pokémon to swim at high speeds."
   },
   {
-    "id": 8,
-    "name": "wartortle",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png",
-    "rating": 1,
-    "description": "Its tail is large and covered with a rich, thick fur. The tail\nbecomes increasingly deeper in color as Wartortle ages.\nThe scratches on its shell are evidence of this Pokémon’s\ntoughness as a battler."
-  },
-  {
-    "id": 9,
-    "name": "blastoise",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
-    "rating": 2,
-    "description": "Blastoise has water spouts that protrude from its shell.\nThe water spouts are very accurate.\nThey can shoot bullets of water with enough accuracy\nto strike empty cans from a distance of over 160 feet."
-  },
-  {
-    "id": 10,
-    "name": "caterpie",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png",
-    "rating": 2,
-    "description": "Perhaps because it would like to grow up\nquickly, it has a voracious appetite, eating\na hundred leaves a day."
-  },
-  {
-    "id": 11,
-    "name": "metapod",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png",
-    "rating": 2,
-    "description": "Its shell is filled with a thick liquid. All of the\ncells throughout its body are being rebuilt in\npreparation for evolution."
-  },
-  {
-    "id": 12,
+    "id": "6b10e950-110f-44f5-ad4b-b4f681feb847",
     "name": "butterfree",
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png",
-    "rating": 5,
+    "rating": 3,
     "description": "Its wings are covered in toxic scales. If it finds\nbird Pokémon going after Caterpie, Butterfree\nsprinkles its scales on them to drive them off."
   },
   {
-    "id": 13,
-    "name": "weedle",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/13.png",
+    "id": "821196ef-dd78-46c4-af45-23f51a925fbb",
+    "name": "pidgey",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png",
     "rating": 3,
-    "description": "Weedle has an extremely acute sense of smell. It is capable\nof distinguishing its favorite kinds of leaves from those it\ndislikes just by sniffing with its big red proboscis (nose)."
+    "description": "Pidgey has an extremely sharp sense of direction.\nIt is capable of unerringly returning home to its nest,\nhowever far it may be removed from its familiar surroundings."
   },
   {
-    "id": 14,
-    "name": "kakuna",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png",
-    "rating": 4,
-    "description": "Kakuna remains virtually immobile as it clings to a tree.\nHowever, on the inside, it is extremely busy as it prepares\nfor its coming evolution.\nThis is evident from how hot the shell becomes to the touch."
-  },
-  {
-    "id": 15,
+    "id": "94bcbd0c-93fa-4bfc-bd96-3d9e76f557f8",
     "name": "beedrill",
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png",
     "rating": 1,
     "description": "Beedrill is extremely territorial. No one should ever approach\nits nest—this is for their own safety. If angered, they will attack\nin a furious swarm."
   },
   {
-    "id": 16,
-    "name": "pidgey",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png",
-    "rating": 1,
-    "description": "Pidgey has an extremely sharp sense of direction.\nIt is capable of unerringly returning home to its nest,\nhowever far it may be removed from its familiar surroundings."
+    "id": "a1bf32aa-ef8e-4721-8e0c-6a4eb8b0dae3",
+    "name": "blastoise",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
+    "rating": 2,
+    "description": "Blastoise has water spouts that protrude from its shell.\nThe water spouts are very accurate.\nThey can shoot bullets of water with enough accuracy\nto strike empty cans from a distance of over 160 feet."
   },
   {
-    "id": 17,
+    "id": "631c1143-fe82-41b8-af3a-e8f0b573a5cb",
     "name": "pidgeotto",
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png",
     "rating": 5,
     "description": "Pidgeotto claims a large area as its own territory. This\nPokémon flies around, patrolling its living space. If its territory\nis violated, it shows no mercy in thoroughly punishing the foe\nwith its sharp claws."
   },
   {
-    "id": 18,
+    "id": "0ad5366a-d12c-4c05-ac6d-5d74f64b956c",
+    "name": "raticate",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png",
+    "rating": 3,
+    "description": "People say that it fled from its enemies by\nusing its small webbed hind feet to swim\nfrom island to island in Alola."
+  },
+  {
+    "id": "782a8c17-3324-474d-bc38-b8b80274d9ac",
     "name": "pidgeot",
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png",
-    "rating": 1,
+    "rating": 3,
     "description": "This Pokémon has a dazzling plumage of beautifully\nglossy feathers. Many Trainers are captivated by the\nstriking beauty of the feathers on its head, compelling\nthem to choose Pidgeot as their Pokémon."
   },
   {
-    "id": 19,
+    "id": "dc78ad1e-fb82-4872-a1d3-8918f151b24b",
     "name": "rattata",
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png",
-    "rating": 4,
+    "rating": 2,
     "description": "Its incisors grow continuously throughout its life.\nIf its incisors get too long, this Pokémon\nbecomes unable to eat, and it starves to death."
-  },
-  {
-    "id": 20,
-    "name": "raticate",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png",
-    "rating": 1,
-    "description": "People say that it fled from its enemies by\nusing its small webbed hind feet to swim\nfrom island to island in Alola."
   }
 ]
