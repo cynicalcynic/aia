@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../include/head.ejs') -%>
+<body class="container">
+<nav class="navbar">
+    <a class="navbar-brand" href="/">Node.js store</a>
+    <a href="/">Home</a>
+</nav>
+<main class="container">
+    <h2 class="mb-3">Your cart</h2>
+    <% if(!cart.length) { %>
+        <p class="alert alert-warning">
+            Your cart is empty
+            <a href="/">Go back</a>
+        </p>
+    <% } else { %>
+        <table class="table" id="product-table">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <% for (item of cart) { %>
+                <tr>
+                    <td><%= item.name %></td>
+                    <td><%= item.price / 100 %> zł</td>
+                    <td>
+                        <form action="/remove_from_cart" method="POST">
+                            <input type="hidden" name="uuid" value="<%= item.uuid %>">
+                            <input type="submit" class="btn btn-link" value="Remove from cart">
+                        </form>
+                    </td>
+                </tr>
+            <% } %>
+            <tr class="font-weight-bold">
+                <td>Total</td>
+                <td><%= cart.reduce((prev, curr) => prev + curr.price, 0) / 100 %> zł</td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+        <form class="d-inline" action="/clear_cart" method="POST">
+            <input class="btn btn-link" type="submit" value="Clear cart">
+        </form>
+        <form class="d-inline" action="/checkout" method="POST">
+            <input class="btn btn-success" type="submit" value="Checkout">
+        </form>
+    <% } %>
+</main>
+</body>
+</html>
