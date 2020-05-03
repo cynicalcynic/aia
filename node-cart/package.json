@@ -2,7 +2,7 @@
   "name": "node-cart",
   "version": "1.0.0",
   "description": "Node.js assignment",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
