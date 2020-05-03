@@ -1,4 +1,4 @@
-# Responsive design
+# React collections
 
 A react pokemon app. You can add, remove and rate pokemons.
 
