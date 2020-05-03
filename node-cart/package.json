@@ -5,17 +5,18 @@
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
-    "dev": "nodemon src/server.js",
+    "dev": "nodemon -w src src/server.js",
     "postinstall": "sqlite3 data.db< create_db.sql"
   },
   "author": "Michał Świderski",
   "license": "MIT",
   "dependencies": {
+    "better-sqlite3": "^7.0.1",
     "body-parser": "^1.19.0",
     "cookie-session": "^1.4.0",
     "ejs": "^3.0.2",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
-    "sqlite3": "^4.1.1"
+    "session-file-store": "^1.4.0"
   }
 }

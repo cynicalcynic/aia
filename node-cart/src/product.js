@@ -1,26 +1,14 @@
-const conn = require('./db.js').getConnection();
+const db = require('./db.js');
 
 function getProducts() {
-    return new Promise((resolve, reject) => {
-        conn.all('SELECT * FROM products', (err, rows) => {
-            if (err) {
-                return reject(err)
-            }
-            resolve(rows);
-        });
-    });
+    const stmt = db.prepare('SELECT * FROM products');
+    return stmt.all();
 }
 
 function getProductsByUuids(uuids) {
-    return new Promise((resolve, reject) => {
-        const sql = `SELECT * FROM products WHERE uuid IN (${'?'.repeat(uuids.length).split('').join(',')})`
-        conn.all(sql, uuids, (err, rows) => {
-            if (err) {
-                return reject(err)
-            }
-            resolve(rows);
-        });
-    });
+    const sql = `SELECT * FROM products WHERE uuid IN (${'?'.repeat(uuids.length).split('').join(',')})`
+    const stmt = db.prepare(sql);
+    return stmt.all(uuids);
 }
 
 

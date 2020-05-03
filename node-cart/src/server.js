@@ -1,17 +1,19 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const cookieSession = require('cookie-session');
+const expressSession = require('express-session');
+const FileStore = require('session-file-store')(expressSession);
 const path = require('path');
 const app = express();
 const {getProducts, getProductsByUuids} = require('./product.js');
-const {checkout, CheckoutError} = require('./cart.js');
+const {checkout, ItemBoughtError} = require('./cart.js');
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(bodyParser.urlencoded());
-app.use(cookieSession({
+app.use(expressSession({
     name: 'session',
-    keys: ['COVID-19']
+    secret: 'COVID-19',
+    store: new FileStore({}),
 }))
 
 app.use((req, res, next) => {
@@ -21,7 +23,7 @@ app.use((req, res, next) => {
     next();
 })
 
-app.get('/', async (req, res, next) => {
+app.get('/', (req, res, next) => {
     let error;
     switch (req.query.error) {
         case undefined :
@@ -33,14 +35,10 @@ app.get('/', async (req, res, next) => {
         default:
             error = 'Something went wrong';
     }
-    try {
-        const products = await getProducts();
-        //remove items bought by someone else from the cart
-        req.session.cart = req.session.cart.filter(uuid => products.some(product => product.uuid === uuid));
-        res.render('index', {error: error, products, cart: req.session.cart})
-    } catch (err) {
-        next(err);
-    }
+    const products = getProducts();
+    //remove items bought by someone else from the cart
+    req.session.cart = req.session.cart.filter(uuid => products.some(product => product.uuid === uuid));
+    res.render('index', {error: error, products, cart: req.session.cart});
 });
 
 app.post('/add_to_cart', (req, res) => {
@@ -58,23 +56,19 @@ app.post('/clear_cart', (req, res) => {
     res.redirect('/');
 });
 
-app.get('/cart', async (req, res, next) => {
-    try {
-        const cart = await getProductsByUuids(req.session.cart);
-        res.render('checkout', {cart});
-    } catch (err) {
-        next(err);
-    }
+app.get('/cart', (req, res, next) => {
+    const cart = getProductsByUuids(req.session.cart);
+    res.render('checkout', {cart});
 });
 
-app.post('/checkout', async (req, res, next) => {
+app.post('/checkout', (req, res, next) => {
     try {
-        await checkout(req.session.cart);
+        checkout(req.session.cart);
         req.session.cart = [];
         res.redirect('/');
     } catch (e) {
         req.session.cart = [];
-        if (e instanceof CheckoutError) {
+        if (e instanceof ItemBoughtError) {
             res.redirect('/?error=itembought')
         } else {
             next(e);
@@ -82,8 +76,17 @@ app.post('/checkout', async (req, res, next) => {
     }
 });
 
+app.get('/reset', (req, res, next) => {
+    require('fs').readFile(path.join(__dirname, '../create_db.sql'), 'utf8', (err, data) => {
+        if (err) return next(err);
+
+        require('./db.js').exec(data);
+    });
+    res.redirect('/');
+});
+
 app.use((err, req, res, next) => {
-    console.error(err);
+    console.error(err.stack);
     res.status(500).send('Internal server error');
 })
 
