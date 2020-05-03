@@ -1,12 +1,12 @@
 {
-  "name": "node-cart",
+  "name": "node.js-store",
   "version": "1.0.0",
   "description": "Node.js assignment",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon -w src src/server.js",
-    "postinstall": "sqlite3 data.db< create_db.sql"
+    "postinstall": "sqlite3 data.db < create_db.sql"
   },
   "author": "Michał Świderski",
   "license": "MIT",
