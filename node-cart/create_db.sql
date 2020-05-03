@@ -1,4 +1,6 @@
-create table if not exists products
+drop table if exists products;
+
+create table products
 (
     uuid  varchar(36) not null
         constraint products_pk
@@ -8,7 +10,7 @@ create table if not exists products
 );
 
 INSERT INTO products (uuid, name, price)
-VALUES ('b4bd42e7-22bd-4a6e-8796-c63d2533c964', 'Josera Kitten 10kg', 120000);
+VALUES ('b4bd42e7-22bd-4a6e-8796-c63d2533c964', 'Josera Kitten 10kg', 12000);
 INSERT INTO products (uuid, name, price)
 VALUES ('76c89de8-ad5e-485c-94d2-9f7186636541', 'Żwirek Benek 10kg', 3000);
 INSERT INTO products (uuid, name, price)
