@@ -11,8 +11,8 @@
         <div class="alert alert-danger"><%= error %></div>
     <% } %>
     <% if(!products.length) { %>
-        <p class="alert alert-info">No products available</p>
-    <% } else { %>
+            <p class="alert alert-info">No products available <a href="/reset">Replenish</a></p>
+        <% } else { %>
         <table class="table" id="product-table">
             <thead>
             <tr>
