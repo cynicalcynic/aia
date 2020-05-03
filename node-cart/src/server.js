@@ -21,7 +21,7 @@ app.use((req, res, next) => {
     next();
 })
 
-app.get('/', async (req, res) => {
+app.get('/', async (req, res, next) => {
     let error;
     switch (req.query.error) {
         case undefined :
@@ -33,8 +33,12 @@ app.get('/', async (req, res) => {
         default:
             error = 'Something went wrong';
     }
-    const products = await getProducts();
-    res.render('index', {error: error, products, cart: req.session.cart})
+    try {
+        const products = await getProducts();
+        res.render('index', {error: error, products, cart: req.session.cart})
+    } catch (err) {
+        next(err);
+    }
 });
 
 app.post('/add_to_cart', (req, res) => {
@@ -52,12 +56,16 @@ app.post('/clear_cart', (req, res) => {
     res.redirect('/');
 });
 
-app.get('/cart', async (req, res) => {
-    const cart = await getProductsByUuids(req.session.cart);
-    res.render('checkout', {cart});
+app.get('/cart', async (req, res, next) => {
+    try {
+        const cart = await getProductsByUuids(req.session.cart);
+        res.render('checkout', {cart});
+    } catch (err) {
+        next(err);
+    }
 });
 
-app.post('/checkout', async (req, res) => {
+app.post('/checkout', async (req, res, next) => {
     try {
         await checkout(req.session.cart);
         req.session.cart = [];
@@ -67,9 +75,14 @@ app.post('/checkout', async (req, res) => {
         if (e instanceof CheckoutError) {
             res.redirect('/?error=itembought')
         } else {
-            res.redirect('/?error=checkouterror')
+            next(e);
         }
     }
 });
+
+app.use((err, req, res, next) => {
+    console.error(err);
+    res.status(500).send('Internal server error');
+})
 
 app.listen(8080, () => console.log('Running at 8080'));
