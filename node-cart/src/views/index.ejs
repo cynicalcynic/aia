@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../include/head.ejs') -%>
+<body class="container">
+<nav class="navbar">
+    <a class="navbar-brand" href="/">Node.js store</a>
+    <a href="/cart">Checkout (<%= cart.length %> item<%= cart.length === 1 ? '' : 's' %> in cart)</a>
+</nav>
+<main class="container">
+    <% if(error) { %>
+        <div class="alert alert-danger"><%= error %></div>
+    <% } %>
+    <% if(!products.length) { %>
+        <p class="alert alert-info">No products available</p>
+    <% } else { %>
+        <table class="table" id="product-table">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <% for (product of products) { %>
+                <tr>
+                    <td class="align-middle"><%= product.name %></td>
+                    <td class="align-middle"><%= product.price / 100 %> zł</td>
+                    <td>
+                        <form action="/add_to_cart" method="POST">
+                            <input type="hidden" name="uuid" value="<%= product.uuid %>">
+                            <% if(cart.includes(product.uuid)) { %>
+                                <input type="submit" value="Add to cart" class="btn btn-link" disabled>
+                            <% } else { %>
+                                <input type="submit" value="Add to cart" class="btn btn-link">
+                            <% } %>
+                        </form>
+                    </td>
+                </tr>
+            <% } %>
+            </tbody>
+
+        </table>
+    <% } %>
+</main>
+</body>
+</html>

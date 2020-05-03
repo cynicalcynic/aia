@@ -1,0 +1,21 @@
+{
+  "name": "node-cart",
+  "version": "1.0.0",
+  "description": "Node.js assignment",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "postinstall": "sqlite3 data2.db< create_db.sql"
+  },
+  "author": "Michał Świderski",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-session": "^1.4.0",
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "sqlite3": "^4.1.1"
+  }
+}
