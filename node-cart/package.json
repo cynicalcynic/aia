@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "postinstall": "sqlite3 data2.db< create_db.sql"
+    "postinstall": "sqlite3 data.db< create_db.sql"
   },
   "author": "Michał Świderski",
   "license": "MIT",
