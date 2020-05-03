@@ -35,6 +35,8 @@ app.get('/', async (req, res, next) => {
     }
     try {
         const products = await getProducts();
+        //remove items bought by someone else from the cart
+        req.session.cart = req.session.cart.filter(uuid => products.some(product => product.uuid === uuid));
         res.render('index', {error: error, products, cart: req.session.cart})
     } catch (err) {
         next(err);
