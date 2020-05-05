@@ -38,7 +38,7 @@ app.get('/', (req, res, next) => {
     const products = getProducts();
     //remove items bought by someone else from the cart
     req.session.cart = req.session.cart.filter(uuid => products.some(product => product.uuid === uuid));
-    res.render('index', {error: error, products, cart: req.session.cart});
+    res.render('index', {error, products, cart: req.session.cart});
 });
 
 app.post('/add_to_cart', (req, res) => {
