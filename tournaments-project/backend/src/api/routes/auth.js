@@ -86,8 +86,8 @@ router.use((err, req, res, next) => {
             code: 409,
             success: false,
             error: {
-                type: 'USER_EXISTS',
-                message: 'A user with a provided data already exists.'
+                type: 'EMAIL_TAKEN',
+                message: 'A user with a provided email already exists.'
             }
         });
     } else {
