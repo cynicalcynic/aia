@@ -1,0 +1,29 @@
+{
+  "name": "tournaments-project",
+  "version": "1.0.0",
+  "description": "Online tournament system - Advanced Internet Applications project.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "mocha"
+  },
+  "author": "Michał Świderski",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.4.1",
+    "pg": "^8.0.3",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.7",
+    "typedi": "^0.8.0",
+    "uuid": "^8.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^7.1.2"
+  }
+}
