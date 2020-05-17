@@ -46,5 +46,5 @@
 ### What I've learned
 I have learned the basics of ASP.NET MVC framework, I have never had any contact with it before.
 
-### What probles I encountered
+### Problems I encountered
 Visual Studio freezed and crashed (without displaying any sort of useful message) every time I tried to create a new ASP project. (I swear half this IDE never works as intended). Ended up having to redownload and reinstall the whole 6GB ASP package (brilliant first impression of a technology I'm using for the first time ;) ).
